@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Hola</title>
+    </head>
+    <body>
+    <div>
+        <h1><a href="/">asd</a></h1>
+    </div>
+
+{% for Juegos_Indie in publicaciones %}
+<div>
+    <p> publicado: {{ Juegos_Indie.fecha_publicacion }}</p>
+    <h2><a href="">{{ Juegos_Indie.titulo }}</a></h2>
+    <p>{{ Juegos_Indie.Nombre_del_juego_indie|linebreaksbr }}</p>
+    <p>{{ Juegos_Indie.Fecha_de_salida|linebreaksbr }}</p>
+    <p>{{ Juegos_Indie.Descripcion|linebreaksbr }}</p>
+    <p>{{ Juegos_Indie.Precio|linebreaksbr }}</p>
+    <p>{{ Juegos_Indie.Plataformas_disponibles|linebreaksbr }}</p>
+    <p>{{ Juegos_Indie.Fecha_de_la_ultima_actualizacion|linebreaksbr }}</p>
+    <hr>
+</div>
+{% endfor %}

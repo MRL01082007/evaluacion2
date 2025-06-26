@@ -1,13 +1,25 @@
+{% load static %}
 <html>
     <head>
+    <div class="page-header">
         <title>Blog sobre juegos indie</title>
+    </div>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
+        <h1><a href= "/">Juegos Indie</a></h1>
         <img src="https://dixgamer.com/wp-content/uploads/2023/11/juegos-indie-1.jpg">
-
+    <div class="content container">
+    <div class="row">
+    <div class="col-md-8">
 {% for Juegos_Indie in publicaciones %}
-<div>
+    <div class="post">
+    <div class="date">
     <p> publicado: {{ Juegos_Indie.fecha_publicacion }}</p>
+    </div>
     <h2><a href="">{{ Juegos_Indie.titulo }}</a></h2>
     <p>{{ Juegos_Indie.Nombre_del_juego_indie|linebreaksbr }}</p>
     <p>{{ Juegos_Indie.Fecha_de_salida|linebreaksbr }}</p>
@@ -18,3 +30,6 @@
     <hr>
 </div>
 {% endfor %}
+</div>
+</div>
+</div>

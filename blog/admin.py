@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.forms import DateInput
 from django.db import models
+from django.forms import DateInput
 from .models import Juegos_Indie
 
 class JuegosIndieAdmin(admin.ModelAdmin):
@@ -11,8 +11,8 @@ class JuegosIndieAdmin(admin.ModelAdmin):
                     'type': 'date',
                     'lang': 'es',
                 },
-                format='%Y-%m-%d',  # ← Formato que Django espera al recibir el dato
-            ),
+                format='%Y-%m-%d',  
+            )
         }
     }
 
@@ -22,4 +22,5 @@ class JuegosIndieAdmin(admin.ModelAdmin):
             if field_name in form.base_fields:
                 form.base_fields[field_name].input_formats = ['%Y-%m-%d']
         return form
+
 admin.site.register(Juegos_Indie, JuegosIndieAdmin)

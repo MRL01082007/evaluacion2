@@ -4,4 +4,4 @@ from .forms import JuegosIndieForm
 
 class JuegosIndieAdmin(admin.ModelAdmin):
     pass
-admin.site.register(Juegos_Indie)
+admin.site.register(Juegos_Indie, JuegosIndieAdmin)

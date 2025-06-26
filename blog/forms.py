@@ -12,5 +12,5 @@ class JuegosIndieForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['Fecha_de_salida'].input_formats = ['%Y-%m-%d']
-        self.fields['Fecha_de_la_ultima_actualizacion'].input_formats = ['%Y-%m-%d']
+        self.fields['Fecha_de_salida'].input_formats = ['%Y-%m-%d', '%Y/%m/%d']
+        self.fields['Fecha_de_la_ultima_actualizacion'].input_formats = ['%Y-%m-%d', '%Y/%m/%d']

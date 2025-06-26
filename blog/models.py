@@ -14,13 +14,6 @@ class Juegos_Indie(models.Model):
     fecha_publicacion = models.DateTimeField(default=timezone.now)
     hora_creacion = models.DateTimeField(blank=True, null=True)
 
-    def save(self, *args, **kwargs):
-        if not self.hora_creacion:
-            self.hora_creacion = timezone.now()
-        if not self.fecha_publicacion:
-            self.fecha_publicacion = timezone.now()
-        super().save(*args, **kwargs)
-
     def publicar(self):
         self.fecha_publicacion = timezone.now()
         self.save()

@@ -10,7 +10,7 @@ class Juegos_Indie(models.Model):
     Precio = models.TextField()
     Plataformas_disponibles = models.TextField()
     Fecha_de_la_ultima_actualizacion = models.DateTimeField(blank=True, null=True)
-    Imagen = models.Imagefield(upload_to='Img_Juegos_Indie/', blank=False, null=True)
+    Imagen = models.ImageField(upload_to='Img_Juegos_Indie/', blank=False, null=True)
     fecha_publicacion = models.DateTimeField(default=timezone.now)
     hora_creacion = models.DateTimeField(blank=True, null=True)
     def publicar(self):

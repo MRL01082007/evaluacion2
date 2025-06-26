@@ -3,6 +3,6 @@ from .models import Juegos_Indie
 from .forms import JuegosIndieForm
 
 class JuegosIndieAdmin(admin.ModelAdmin):
-    form = JuegosIndieForm
+    #form = JuegosIndieForm
 
-admin.site.register(Juegos_Indie, JuegosIndieAdmin)
+admin.site.register(Juegos_Indie)

@@ -22,11 +22,11 @@
     </div>
     <h2><a href="">{{ Juegos_Indie.titulo }}</a></h2>
     <p>{{ Juegos_Indie.Nombre_del_juego_indie|linebreaksbr }}</p>
-    <p>{{ Juegos_Indie.Fecha_de_salida|linebreaksbr|date:"d/m/Y" }}</p>
+    <p>{{ Juegos_Indie.Fecha_de_salida|date:"d/m/Y" }}</p>
     <p>{{ Juegos_Indie.Descripcion|linebreaksbr }}</p>
     <p>{{ Juegos_Indie.Precio|linebreaksbr }}</p>
     <p>{{ Juegos_Indie.Plataformas_disponibles|linebreaksbr }}</p>
-    <p>{{ Juegos_Indie.Fecha_de_la_ultima_actualizacion|linebreaksbr|date:"d/m/Y" }}</p>
+    <p>{{ Juegos_Indie.Fecha_de_la_ultima_actualizacion|date:"d/m/Y" }}</p>
     <hr>
 </div>
 {% endfor %}

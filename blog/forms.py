@@ -12,6 +12,5 @@ class JuegosIndieForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Esto es importante para que el input reconozca el valor cuando edites
         self.fields['Fecha_de_salida'].input_formats = ['%Y-%m-%d']
         self.fields['Fecha_de_la_ultima_actualizacion'].input_formats = ['%Y-%m-%d']

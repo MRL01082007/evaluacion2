@@ -18,15 +18,15 @@
 {% for Juegos_Indie in publicaciones %}
     <div class="post">
     <div class="date">
-    <p> publicado: {{ Juegos_Indie.fecha_publicacion|date:"d/m/Y" }}</p>
+    <p> Publicado: {{ Juegos_Indie.fecha_publicacion|date:"d/m/Y" }}</p>
     </div>
     <h2><a href="">{{ Juegos_Indie.titulo }}</a></h2>
     <p>{{ Juegos_Indie.Nombre_del_juego_indie|linebreaksbr }}</p>
-    <p>{{ Juegos_Indie.Fecha_de_salida|linebreaksbr|date:"d/m/Y" }}</p>
+    <p> Fecha de salida: {{ Juegos_Indie.Fecha_de_salida|date:"d/m/Y" }}</p>
     <p>{{ Juegos_Indie.Descripcion|linebreaksbr }}</p>
     <p>{{ Juegos_Indie.Precio|linebreaksbr }}</p>
     <p>{{ Juegos_Indie.Plataformas_disponibles|linebreaksbr }}</p>
-    <p>{{ Juegos_Indie.Fecha_de_la_ultima_actualizacion|linebreaksbr|date:"d/m/Y" }}</p>
+    <p> Fecha de la ultima actualizacion: {{ Juegos_Indie.Fecha_de_la_ultima_actualizacion|date:"d/m/Y" }}</p>
     <hr>
 </div>
 {% endfor %}
